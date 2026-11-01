@@ -1,0 +1,1526 @@
+{
+  "metadata": {
+    "dataset_title": "بانک جامع تحلیلی مکمل‌های پروتئین وی بازار ایران (۱۴۰۴-۱۴۰۵)",
+    "currency": "Toman (تومان)",
+    "total_main_products": 30,
+    "golden_standard_protein_per_serving_g": 24.0
+  },
+  "products": [
+    {
+      "id": "WP-01",
+      "brand_fa": "کاله پرو",
+      "brand_en": "Kalleh Pro",
+      "model": "وی ۱۰۰٪ قوطی ۱۸۰۰ گرمی",
+      "supply_category": "لبنی داخلی",
+      "origin_manufacturer": "ایران - شرکت سولیکو کاله",
+      "whey_type": "WPC (Lactose-Free)",
+      "whey_type_fa": "کنسانتره بدون لاکتوز",
+      "base_weight_g": 1800,
+      "other_weights": [
+        "650g",
+        "Sachet 25g x 12"
+      ],
+      "servings": 55,
+      "protein_per_serving_g": 24.0,
+      "calories_per_serving": 120,
+      "min_price_toman": 8100000,
+      "max_price_toman": 9500000,
+      "avg_price_toman": 8800000,
+      "price_per_kg_toman": 4888889,
+      "price_per_g_protein_toman": 6667,
+      "user_rating": 4.1,
+      "total_votes": 4441,
+      "satisfaction_rate_percent": 86.6,
+      "lactose_free": true,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "عالی (فاقد لاکتوز و ضد نفخ)",
+      "solubility": "عالی (با شیکر)",
+      "top_flavors": [
+        "شکلاتی",
+        "وانیلی",
+        "کوکی/بیسکوئیت"
+      ],
+      "fitness_goals": [
+        "مصرف روزمره",
+        "افزایش حجم",
+        "کاهش وزن",
+        "معده حساس به لاکتوز"
+      ],
+      "pros": [
+        "تضمین اصالت لبنی و سلامت فاکتورهای آزمایشگاهی کبد و کلیه",
+        "فاقد لاکتوز و بدون ایجاد نفخ",
+        "ایجاد حس سیری مناسب در رژیم‌ها"
+      ],
+      "cons": [
+        "افزایش شدید قیمت نسبت به سال قبل",
+        "ته‌مزه پنیر محلی در صورت ترکیب با آب خالص",
+        "پاک شدن سریع کد تی‌تک در صورت خراشیدن با کلید"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-02",
+      "brand_fa": "کاله پرو",
+      "brand_en": "Kalleh Pro",
+      "model": "ساشه ۲۵ گرمی (بسته ۱۲ عددی)",
+      "supply_category": "لبنی داخلی",
+      "origin_manufacturer": "ایران - شرکت سولیکو کاله",
+      "whey_type": "WPC (Lactose-Free)",
+      "whey_type_fa": "کنسانتره بدون لاکتوز",
+      "base_weight_g": 300,
+      "other_weights": [
+        "1800g",
+        "650g"
+      ],
+      "servings": 12,
+      "protein_per_serving_g": 19.0,
+      "calories_per_serving": 95,
+      "min_price_toman": 1450000,
+      "max_price_toman": 1750000,
+      "avg_price_toman": 1600000,
+      "price_per_kg_toman": 5333333,
+      "price_per_g_protein_toman": 7018,
+      "user_rating": 4.3,
+      "total_votes": 1446,
+      "satisfaction_rate_percent": 91.4,
+      "lactose_free": true,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "عالی (فاقد لاکتوز)",
+      "solubility": "عالی",
+      "top_flavors": [
+        "بیسکوئیت",
+        "شکلاتی"
+      ],
+      "fitness_goals": [
+        "مصرف روزمره",
+        "باشگاه و مسافرت",
+        "تست طعم"
+      ],
+      "pros": [
+        "بالاترین نرخ رضایت خریداران در دیجی‌کالا (۹۱.۴٪)",
+        "طعم بسیار خوش‌خوراک شبیه بیسکوئیت پتی‌بور بدون شیرینی مصنوعی",
+        "حمل بسیار آسان برای باشگاه و سفر"
+      ],
+      "cons": [
+        "قیمت تمام‌شده بالاتر نسبت به قوطی ۱۸۰۰ گرمی",
+        "۱۹ گرم پروتئین در هر ساشه ۲۵ گرمی"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-03",
+      "brand_fa": "کارن (PNC)",
+      "brand_en": "Karen Pharma",
+      "model": "گلدن وی (Golden Whey)",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - شرکت داروسازی کارن",
+      "whey_type": "Blend (WPC + WPI + Lactase)",
+      "whey_type_fa": "ترکیبی (کنسانتره + ایزوله + آنزیم لاکتاز)",
+      "base_weight_g": 1000,
+      "other_weights": [
+        "1000g"
+      ],
+      "servings": 30,
+      "protein_per_serving_g": 23.0,
+      "calories_per_serving": 120,
+      "min_price_toman": 6649500,
+      "max_price_toman": 14300000,
+      "avg_price_toman": 10474750,
+      "price_per_kg_toman": 10474750,
+      "price_per_g_protein_toman": 15181,
+      "user_rating": 4.4,
+      "total_votes": 620,
+      "satisfaction_rate_percent": 89.0,
+      "lactose_free": true,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "عالی (حاوی آنزیم لاکتاز ضد نفخ)",
+      "solubility": "عالی و بدون توده‌شدگی",
+      "top_flavors": [
+        "شکلات",
+        "موز",
+        "وانیل",
+        "توت‌فرنگی"
+      ],
+      "fitness_goals": [
+        "عضله‌سازی بدون نفخ",
+        "معده حساس",
+        "افزایش حجم باکیفیت"
+      ],
+      "pros": [
+        "کیفیت گرید فارماسیوتیکال (دارویی)",
+        "حلالیت فوق‌العاده و تعادل شیرینی",
+        "حاوی آنزیم لاکتاز جهت جلوگیری کامل از نفخ"
+      ],
+      "cons": [
+        "قیمت بالا به نسبت وزن ۱۰۰۰ گرمی",
+        "عدم توصیه برای افراد تازه جراحی‌شده اسلیو معده به دلیل بخش کنسانتره"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-04",
+      "brand_fa": "کارن (PNC)",
+      "brand_en": "Karen Pharma",
+      "model": "ایزو وی (Iso Whey PNC)",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - شرکت داروسازی کارن",
+      "whey_type": "WPI",
+      "whey_type_fa": "ایزوله خالص آب‌پنیر",
+      "base_weight_g": 912,
+      "other_weights": [
+        "900g",
+        "Sachet 14g x 15"
+      ],
+      "servings": 30,
+      "protein_per_serving_g": 24.5,
+      "calories_per_serving": 100,
+      "min_price_toman": 20230000,
+      "max_price_toman": 20240000,
+      "avg_price_toman": 20235000,
+      "price_per_kg_toman": 22187500,
+      "price_per_g_protein_toman": 27531,
+      "user_rating": 4.2,
+      "total_votes": 480,
+      "satisfaction_rate_percent": 88.0,
+      "lactose_free": true,
+      "gluten_free": true,
+      "acne_risk": "Low",
+      "digestive_compatibility": "فوق‌العاده (فاقد لاکتوز و چربی)",
+      "solubility": "عالی",
+      "top_flavors": [
+        "بیسکوئیت",
+        "موز",
+        "پرتقال"
+      ],
+      "fitness_goals": [
+        "دوره کات سنگین",
+        "تخلیه گلیکوژن",
+        "حساسیت شدید به لاکتوز"
+      ],
+      "pros": [
+        "بالاترین خلوص ایزوله در میان تولیدات داخلی",
+        "مناسب‌ترین گزینه دارویی داخل برای دوره کات و چربی‌سوزی",
+        "جذب بسیار سریع و بدون چربی/قند اضافه"
+      ],
+      "cons": [
+        "قیمت بسیار بالا نسبت به وزن کم قوطی (۹۱۲ گرم)"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-05",
+      "brand_fa": "پگاه",
+      "brand_en": "Pegah",
+      "model": "اولترا پاور وی (Ultra Power Whey)",
+      "supply_category": "لبنی داخلی",
+      "origin_manufacturer": "ایران - صنایع شیر ایران",
+      "whey_type": "WPC 80",
+      "whey_type_fa": "کنسانتره ۸۰ درصد",
+      "base_weight_g": 1000,
+      "other_weights": [
+        "2000g",
+        "Sachet 33g x 12",
+        "نسخه بانوان ۱۰۰۰ گرم"
+      ],
+      "servings": 30,
+      "protein_per_serving_g": 23.0,
+      "calories_per_serving": 120,
+      "min_price_toman": 5200000,
+      "max_price_toman": 5200000,
+      "avg_price_toman": 5200000,
+      "price_per_kg_toman": 5200000,
+      "price_per_g_protein_toman": 7536,
+      "user_rating": 4.2,
+      "total_votes": 510,
+      "satisfaction_rate_percent": 86.0,
+      "lactose_free": false,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "معمولی (حاوی لاکتوز طبیعی شیر)",
+      "solubility": "متوسط (نیازمند شیک بیشتر)",
+      "top_flavors": [
+        "شکلات",
+        "موز",
+        "وانیل"
+      ],
+      "fitness_goals": [
+        "صرفه اقتصادی بالا",
+        "افزایش حجم",
+        "تغذیه بانوان"
+      ],
+      "pros": [
+        "ارزش خرید اقتصادی عالی و تولید مستقیم از شیر تازه",
+        "عدم ایجاد جوش‌های پوستی طبق تجربه کاربران",
+        "ایجاد سیری طولانی‌مدت به‌ویژه در نسخه بانوان"
+      ],
+      "cons": [
+        "حلالیت کمی کندتر نسبت به نمونه‌های ایزوله",
+        "حاوی لاکتوز (نامناسب برای افراد دارای عدم تحمل لاکتوز)"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-06",
+      "brand_fa": "پگاه",
+      "brand_en": "Pegah",
+      "model": "پودر پروتئین تغلیظ‌شده شیر (MPC)",
+      "supply_category": "لبنی داخلی",
+      "origin_manufacturer": "ایران - صنایع شیر ایران",
+      "whey_type": "MPC",
+      "whey_type_fa": "پروتئین تغلیظ‌شده شیر (وی + کازئین)",
+      "base_weight_g": 1000,
+      "other_weights": [
+        "کیسه ۱۵ کیلوگرمی صنعتی"
+      ],
+      "servings": 30,
+      "protein_per_serving_g": 21.0,
+      "calories_per_serving": 110,
+      "min_price_toman": 2584000,
+      "max_price_toman": 3448536,
+      "avg_price_toman": 3016268,
+      "price_per_kg_toman": 3016268,
+      "price_per_g_protein_toman": 4788,
+      "user_rating": 4.2,
+      "total_votes": 390,
+      "satisfaction_rate_percent": 85.0,
+      "lactose_free": false,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "معمولی (حاوی کازئین و لاکتوز)",
+      "solubility": "متوسط به پایین",
+      "top_flavors": [
+        "ساده لبنی",
+        "شکلاتی"
+      ],
+      "fitness_goals": [
+        "مصرف فوق اقتصادی",
+        "میان‌وعده و قبل از خواب"
+      ],
+      "pros": [
+        "ارزان‌ترین منبع پروتئینی استاندارد و آزمایش‌شده در ایران",
+        "رهایش تدریجی آمینواسیدها به دلیل حضور کازئین"
+      ],
+      "cons": [
+        "سرعت جذب پایین‌تر نسبت به وی خالص پس از تمرین",
+        "نیاز به شیک کردن طولانی‌تر"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-07",
+      "brand_fa": "دوبیس نوتریشن",
+      "brand_en": "Doobis Nutrition",
+      "model": "وی گلد ۱۰۰٪ (Whey Gold)",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - صنایع غذایی ایلیا پارس",
+      "whey_type": "WPC 80",
+      "whey_type_fa": "کنسانتره ۸۰ درصد",
+      "base_weight_g": 2270,
+      "other_weights": [
+        "908g"
+      ],
+      "servings": 75,
+      "protein_per_serving_g": 24.0,
+      "calories_per_serving": 116,
+      "min_price_toman": 17900000,
+      "max_price_toman": 29500000,
+      "avg_price_toman": 23700000,
+      "price_per_kg_toman": 10440529,
+      "price_per_g_protein_toman": 13167,
+      "user_rating": 3.5,
+      "total_votes": 319,
+      "satisfaction_rate_percent": 72.0,
+      "lactose_free": false,
+      "gluten_free": false,
+      "acne_risk": "Medium",
+      "digestive_compatibility": "خوب (هضم سبک‌تر از کاله)",
+      "solubility": "متوسط به پایین (کف‌کننده در برخی بچ‌ها)",
+      "top_flavors": [
+        "کارامل شکلات",
+        "دبل چاکلت"
+      ],
+      "fitness_goals": [
+        "حجم خشک"
+      ],
+      "pros": [
+        "نسبت عالی ۶ به ۱ پروتئین به کربوهیدرات (مناسب حجم خشک)",
+        "شیرینی ملایم و عدم وجود قند اضافی"
+      ],
+      "cons": [
+        "گزارش افت کیفیت و حلالیت (کف کردن و گلوله شدن) در بچ‌های جدید",
+        "جهش شدید قیمت نسخه ۲۲۷۰ گرمی",
+        "بروز جوش خفیف پوستی در برخی مصرف‌کنندگان"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-08",
+      "brand_fa": "دوبیس نوتریشن",
+      "brand_en": "Doobis Nutrition",
+      "model": "ایزو وی (Iso Whey)",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - صنایع غذایی ایلیا پارس",
+      "whey_type": "WPI",
+      "whey_type_fa": "ایزوله آب‌پنیر",
+      "base_weight_g": 1500,
+      "other_weights": [
+        "1500g"
+      ],
+      "servings": 50,
+      "protein_per_serving_g": 25.0,
+      "calories_per_serving": 118.5,
+      "min_price_toman": 20200000,
+      "max_price_toman": 20200000,
+      "avg_price_toman": 20200000,
+      "price_per_kg_toman": 13466667,
+      "price_per_g_protein_toman": 16160,
+      "user_rating": 3.1,
+      "total_votes": 95,
+      "satisfaction_rate_percent": 65.0,
+      "lactose_free": true,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "خوب (کم‌لاکتوز)",
+      "solubility": "متوسط",
+      "top_flavors": [
+        "شکلاتی"
+      ],
+      "fitness_goals": [
+        "دوره کات",
+        "عضله‌سازی خشک"
+      ],
+      "pros": [
+        "۲۵ گرم پروتئین خالص در هر سروینگ",
+        "وزن مناسب ۱۵۰۰ گرمی"
+      ],
+      "cons": [
+        "پایین‌ترین امتیاز رضایت کاربران در داروکده (۳.۱ از ۵)",
+        "انتقاد خریداران از طعم و حلالیت"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-09",
+      "brand_fa": "دوبیس نوتریشن",
+      "brand_en": "Doobis Nutrition",
+      "model": "هایپر وی پلاس (Hyper Whey Plus)",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - صنایع غذایی ایلیا پارس",
+      "whey_type": "Blend",
+      "whey_type_fa": "ترکیبی (وی پلاس)",
+      "base_weight_g": 1500,
+      "other_weights": [
+        "Sachet x 10"
+      ],
+      "servings": 45,
+      "protein_per_serving_g": 23.0,
+      "calories_per_serving": 120,
+      "min_price_toman": 9317000,
+      "max_price_toman": 10300000,
+      "avg_price_toman": 9808500,
+      "price_per_kg_toman": 6539000,
+      "price_per_g_protein_toman": 9477,
+      "user_rating": 4.3,
+      "total_votes": 210,
+      "satisfaction_rate_percent": 86.0,
+      "lactose_free": false,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "خوب",
+      "solubility": "خوب",
+      "top_flavors": [
+        "شکلاتی"
+      ],
+      "fitness_goals": [
+        "افزایش حجم",
+        "ریکاوری اقتصادی"
+      ],
+      "pros": [
+        "امتیاز رضایت بسیار خوب در دیجی‌کالا (۴.۳ از ۵)",
+        "قیمت بسیار متعادل‌تر نسبت به وی گلد دوبیس"
+      ],
+      "cons": [
+        "کربوهیدرات کمی بالاتر نسبت به نسخه‌های ایزوله"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-10",
+      "brand_fa": "ژن استار",
+      "brand_en": "Genestar",
+      "model": "وی گلد (Whey Gold)",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - داروسازی ستارگان نیک",
+      "whey_type": "Blend (WPC + WPH + Enzymes)",
+      "whey_type_fa": "کنسانتره + هیدرولیزه + آنزیم هضمی",
+      "base_weight_g": 908,
+      "other_weights": [
+        "2270g"
+      ],
+      "servings": 31,
+      "protein_per_serving_g": 23.5,
+      "calories_per_serving": 110,
+      "min_price_toman": 4764490,
+      "max_price_toman": 7500000,
+      "avg_price_toman": 6132245,
+      "price_per_kg_toman": 6753574,
+      "price_per_g_protein_toman": 8418,
+      "user_rating": 3.8,
+      "total_votes": 90,
+      "satisfaction_rate_percent": 87.0,
+      "lactose_free": false,
+      "gluten_free": false,
+      "acne_risk": "High",
+      "digestive_compatibility": "خوب (حاوی آنزیم‌های هضمی)",
+      "solubility": "خوب",
+      "top_flavors": [
+        "شیر شکلات",
+        "بیسکوئیت وانیلی",
+        "کرم کارامل"
+      ],
+      "fitness_goals": [
+        "شروع بدنسازی",
+        "افزایش حجم اقتصادی"
+      ],
+      "pros": [
+        "قیمت اقتصادی در وزن ۹۰۸ گرمی",
+        "غنی‌شده با ویتامین‌ها، مواد معدنی و آنزیم‌های هضمی",
+        "چربی پایین‌تر نسبت به کاله پرو"
+      ],
+      "cons": [
+        "گزارش مکرر بروز جوش صورت و بدن در برخی افراد",
+        "برداشتن هدایای تبلیغاتی روی قوطی (شیکر/آمینو) توسط برخی فروشندگان آنلاین"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-11",
+      "brand_fa": "ژن استار",
+      "brand_en": "Genestar",
+      "model": "ایزو گلد ۱۰۰٪ (Iso Gold)",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - داروسازی ستارگان نیک",
+      "whey_type": "WPI 90",
+      "whey_type_fa": "ایزوله ۹۰ درصد",
+      "base_weight_g": 910,
+      "other_weights": [
+        "2270g"
+      ],
+      "servings": 30,
+      "protein_per_serving_g": 23.0,
+      "calories_per_serving": 100,
+      "min_price_toman": 7500000,
+      "max_price_toman": 15000000,
+      "avg_price_toman": 11250000,
+      "price_per_kg_toman": 12362637,
+      "price_per_g_protein_toman": 16304,
+      "user_rating": 3.8,
+      "total_votes": 49,
+      "satisfaction_rate_percent": 78.0,
+      "lactose_free": true,
+      "gluten_free": false,
+      "acne_risk": "Medium",
+      "digestive_compatibility": "خوب (کم‌لاکتوز با آنزیم)",
+      "solubility": "متوسط",
+      "top_flavors": [
+        "شکلاتی",
+        "وانیلی"
+      ],
+      "fitness_goals": [
+        "دوره کات اقتصادی"
+      ],
+      "pros": [
+        "خلوص ۹۰ درصد ایزوله با تنها ۱۰۰ کالری در هر وعده",
+        "قیمت ارزان‌تر نسبت به ایزو وی کارن"
+      ],
+      "cons": [
+        "طعم تلخ و زننده در مدل ایزوله برای برخی مصرف‌کنندگان"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-12",
+      "brand_fa": "فانتوم نوتریشن",
+      "brand_en": "Phantom Nutrition",
+      "model": "وی گلد فانتوم",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - فانتوم نوتریشن",
+      "whey_type": "WPC 80",
+      "whey_type_fa": "کنسانتره ۸۰ درصد",
+      "base_weight_g": 908,
+      "other_weights": [
+        "2270g",
+        "4540g (10 lbs)"
+      ],
+      "servings": 31,
+      "protein_per_serving_g": 24.0,
+      "calories_per_serving": 120,
+      "min_price_toman": 5255600,
+      "max_price_toman": 5800000,
+      "avg_price_toman": 5527800,
+      "price_per_kg_toman": 6087885,
+      "price_per_g_protein_toman": 7430,
+      "user_rating": 3.5,
+      "total_votes": 140,
+      "satisfaction_rate_percent": 76.0,
+      "lactose_free": false,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "معمولی",
+      "solubility": "خوب",
+      "top_flavors": [
+        "کوکیز کرم",
+        "شکلاتی"
+      ],
+      "fitness_goals": [
+        "مصرف اقتصادی",
+        "سایز بزرگ باشگاهی"
+      ],
+      "pros": [
+        "طعم غیرتکراری و محبوب کوکیز کرم",
+        "عرضه در بسته‌بندی اقتصادی ۱۰ پوندی (۴۵۴۰ گرم)"
+      ],
+      "cons": [
+        "فرمولاسیون پایه کنسانتره، نامناسب برای کات سنگین"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-13",
+      "brand_fa": "ویثر نوتریشن",
+      "brand_en": "Wisser Nutrition",
+      "model": "وی ایزوله ویثر",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - ویثر نوتریشن",
+      "whey_type": "WPI (Gluten-Free)",
+      "whey_type_fa": "ایزوله فاقد گلوتن",
+      "base_weight_g": 2270,
+      "other_weights": [
+        "908g"
+      ],
+      "servings": 75,
+      "protein_per_serving_g": 24.0,
+      "calories_per_serving": 110,
+      "min_price_toman": 15816000,
+      "max_price_toman": 15816000,
+      "avg_price_toman": 15816000,
+      "price_per_kg_toman": 6967401,
+      "price_per_g_protein_toman": 8787,
+      "user_rating": 3.3,
+      "total_votes": 85,
+      "satisfaction_rate_percent": 70.0,
+      "lactose_free": true,
+      "gluten_free": true,
+      "acne_risk": "Low",
+      "digestive_compatibility": "عالی (فاقد شکر، گلوتن و لاکتوز)",
+      "solubility": "خوب",
+      "top_flavors": [
+        "شکلاتی",
+        "موزی"
+      ],
+      "fitness_goals": [
+        "جراحی اسلیو معده",
+        "حساسیت به گلوتن",
+        "دوره کات"
+      ],
+      "pros": [
+        "توصیه‌شده توسط داروسازان برای بیماران پس از جراحی اسلیو معده",
+        "فاقد شکر و گلوتن با قیمت مناسب در وزن ۲.۲۷ کیلوگرم"
+      ],
+      "cons": [
+        "شکایات کاربران در دیجی‌کالا از کیفیت پلمپ و وکیوم در برخی ارسال‌ها"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-14",
+      "brand_fa": "ساپلند نوتریشن",
+      "brand_en": "Suppland Nutrition",
+      "model": "وی ایزوله ساپلند",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - ساپلند نوتریشن",
+      "whey_type": "WPI",
+      "whey_type_fa": "ایزوله آب‌پنیر",
+      "base_weight_g": 2270,
+      "other_weights": [
+        "908g"
+      ],
+      "servings": 75,
+      "protein_per_serving_g": 24.0,
+      "calories_per_serving": 120,
+      "min_price_toman": 14235200,
+      "max_price_toman": 16448000,
+      "avg_price_toman": 15341600,
+      "price_per_kg_toman": 6758414,
+      "price_per_g_protein_toman": 8523,
+      "user_rating": 3.6,
+      "total_votes": 65,
+      "satisfaction_rate_percent": 75.0,
+      "lactose_free": true,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "خوب",
+      "solubility": "خوب",
+      "top_flavors": [
+        "شکلاتی"
+      ],
+      "fitness_goals": [
+        "دوره کات اقتصادی",
+        "عضله‌سازی میان‌رده"
+      ],
+      "pros": [
+        "قیمت رقابتی برای یک پروتئین ایزوله ۲۲۷۰ گرمی"
+      ],
+      "cons": [
+        "تنوع طعم محدود"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-15",
+      "brand_fa": "فارماتک",
+      "brand_en": "Pharmatech",
+      "model": "وی پروتئین گلد فارماتک",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - فارماتک",
+      "whey_type": "WPC",
+      "whey_type_fa": "کنسانتره آب‌پنیر",
+      "base_weight_g": 1818,
+      "other_weights": [
+        "2270g (وی ۱۰۰ و ایزو وی)"
+      ],
+      "servings": 57,
+      "protein_per_serving_g": 23.0,
+      "calories_per_serving": 120,
+      "min_price_toman": 7618990,
+      "max_price_toman": 8200000,
+      "avg_price_toman": 7909495,
+      "price_per_kg_toman": 4350657,
+      "price_per_g_protein_toman": 6033,
+      "user_rating": 3.7,
+      "total_votes": 110,
+      "satisfaction_rate_percent": 79.0,
+      "lactose_free": false,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "معمولی",
+      "solubility": "خوب",
+      "top_flavors": [
+        "شکلاتی",
+        "وانیلی"
+      ],
+      "fitness_goals": [
+        "مبتدیان",
+        "صرفه اقتصادی بالا"
+      ],
+      "pros": [
+        "یکی از ارزان‌ترین قیمت‌ها به ازای هر کیلوگرم و هر گرم پروتئین",
+        "تعداد سروینگ بالا (۵۷ پیمانه در قوطی ۱۸۱۸ گرمی)"
+      ],
+      "cons": [
+        "فرمولاسیون و طعم پایه داروخانه‌ای"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-16",
+      "brand_fa": "لوکس ساپلمنت",
+      "brand_en": "Loox Supplement",
+      "model": "وی پروتئین ۱۰۰٪ لوکس",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - لوکس ساپلمنت",
+      "whey_type": "WPC",
+      "whey_type_fa": "کنسانتره آب‌پنیر",
+      "base_weight_g": 2270,
+      "other_weights": [
+        "2000g (ایزوله)"
+      ],
+      "servings": 75,
+      "protein_per_serving_g": 21.0,
+      "calories_per_serving": 104,
+      "min_price_toman": 8600000,
+      "max_price_toman": 11246000,
+      "avg_price_toman": 9923000,
+      "price_per_kg_toman": 4371366,
+      "price_per_g_protein_toman": 6300,
+      "user_rating": 3.6,
+      "total_votes": 75,
+      "satisfaction_rate_percent": 74.0,
+      "lactose_free": false,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "معمولی",
+      "solubility": "خوب",
+      "top_flavors": [
+        "شکلاتی"
+      ],
+      "fitness_goals": [
+        "مصرف اقتصادی روزمره"
+      ],
+      "pros": [
+        "کالری پایین در هر پیمانه (۱۰۴ کالری)",
+        "قیمت اقتصادی در وزن ۲۲۷۰ گرم"
+      ],
+      "cons": [
+        "میزان پروتئین کمتر در هر سروینگ (۲۱ گرم در مقایسه با استاندارد ۲۴ گرم)"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-17",
+      "brand_fa": "تریم لایف",
+      "brand_en": "Trim Life",
+      "model": "پودر پروتئین وی ۱۰۰٪",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - تریم لایف",
+      "whey_type": "WPC High Purity",
+      "whey_type_fa": "کنسانتره با خلوص بالا",
+      "base_weight_g": 2270,
+      "other_weights": [
+        "2270g"
+      ],
+      "servings": 75,
+      "protein_per_serving_g": 24.5,
+      "calories_per_serving": 112,
+      "min_price_toman": 11500000,
+      "max_price_toman": 13500000,
+      "avg_price_toman": 12500000,
+      "price_per_kg_toman": 5506608,
+      "price_per_g_protein_toman": 6803,
+      "user_rating": 4.0,
+      "total_votes": 130,
+      "satisfaction_rate_percent": 82.0,
+      "lactose_free": false,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "خوب",
+      "solubility": "خوب",
+      "top_flavors": [
+        "شکلاتی",
+        "وانیلی"
+      ],
+      "fitness_goals": [
+        "تعریف عضلانی و کات",
+        "رقیب مستقیم کاله پرو"
+      ],
+      "pros": [
+        "پروتئین بالاتر و چربی و کربوهیدرات کمتر در مقایسه مستقیم با کاله پرو"
+      ],
+      "cons": [
+        "بافت کمتر خامه‌ای نسبت به کاله پرو"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-18",
+      "brand_fa": "فست میل مکس پرو",
+      "brand_en": "FastMeal MaxPro",
+      "model": "ساشه وی ایزوله کلینیکال و ورزشی",
+      "supply_category": "داروسازی داخلی",
+      "origin_manufacturer": "ایران - اسمارت نوتریشن",
+      "whey_type": "WPI + Inulin + Glutamine",
+      "whey_type_fa": "ایزوله + پری‌بیوتیک اینولین + گلوتامین",
+      "base_weight_g": 420,
+      "other_weights": [
+        "30 Sachets"
+      ],
+      "servings": 30,
+      "protein_per_serving_g": 13.5,
+      "calories_per_serving": 70,
+      "min_price_toman": 2800000,
+      "max_price_toman": 3500000,
+      "avg_price_toman": 3150000,
+      "price_per_kg_toman": 7500000,
+      "price_per_g_protein_toman": 7778,
+      "user_rating": 4.3,
+      "total_votes": 95,
+      "satisfaction_rate_percent": 88.0,
+      "lactose_free": true,
+      "gluten_free": true,
+      "acne_risk": "Low",
+      "digestive_compatibility": "فوق‌العاده (حاوی فیبر پری‌بیوتیک اینولین)",
+      "solubility": "فوق‌العاده",
+      "top_flavors": [
+        "وانیلی ملایم"
+      ],
+      "fitness_goals": [
+        "معده فوق حساس",
+        "سالمندان (سارکوپنیا)",
+        "بیماران و دوران نقاهت"
+      ],
+      "pros": [
+        "فاقد لاکتوز، گلوتن و مواد نگهدارنده",
+        "حاوی ۱.۸ گرم گلوتامین، ویتامین B6 و ۰.۳ گرم فیبر اینولین جهت سلامت روده"
+      ],
+      "cons": [
+        "۱۳.۵ گرم پروتئین در هر ساشه (ورزشکاران سنگین‌وزن به ۲ ساشه نیاز دارند)"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-19",
+      "brand_fa": "یوروویتال",
+      "brand_en": "Eurho Vital",
+      "model": "وی پرو (Whey Pro)",
+      "supply_category": "تحت لیسانس (داروخانه‌ای)",
+      "origin_manufacturer": "آلمان (Euro OTC Pharma) - حکیمان طب کار",
+      "whey_type": "Blend (WPI + WPC + B6)",
+      "whey_type_fa": "ترکیبی (ایزوله + کنسانتره + ویتامین B6)",
+      "base_weight_g": 1000,
+      "other_weights": [
+        "1800g",
+        "2250g",
+        "Sachet 30g x 12"
+      ],
+      "servings": 33,
+      "protein_per_serving_g": 22.8,
+      "calories_per_serving": 120,
+      "min_price_toman": 10587570,
+      "max_price_toman": 15400000,
+      "avg_price_toman": 12993785,
+      "price_per_kg_toman": 12993785,
+      "price_per_g_protein_toman": 17270,
+      "user_rating": 3.7,
+      "total_votes": 290,
+      "satisfaction_rate_percent": 78.0,
+      "lactose_free": false,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "متوسط",
+      "solubility": "خوب",
+      "top_flavors": [
+        "شکلات",
+        "وانیل"
+      ],
+      "fitness_goals": [
+        "حفظ عضلات در کاهش وزن",
+        "ریکاوری استاندارد داروخانه‌ای"
+      ],
+      "pros": [
+        "کیفیت استاندارد تحت لیسانس آلمان",
+        "طعم کلاسیک و عطر مطلوب، حاوی گلوتامین و BCAA"
+      ],
+      "cons": [
+        "قیمت بسیار بالا به ازای هر ۱ کیلوگرم",
+        "تفاوت مقدار پروتئین نسخه قوطی (۲۲.۸ گرم) با ساشه (۲۴ گرم)"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-20",
+      "brand_fa": "ترک نوتریشن",
+      "brand_en": "Trec Nutrition",
+      "model": "وی ۱۰۰ گلد کر لاین (Gold Core Line)",
+      "supply_category": "تحت لیسانس (داروخانه‌ای)",
+      "origin_manufacturer": "لهستان - کیمیا مکمل آراد",
+      "whey_type": "Triple Blend (WPC + WPI + WPH)",
+      "whey_type_fa": "ترکیب سه‌گانه (کنسانتره + ایزوله + هیدرولیزه)",
+      "base_weight_g": 1500,
+      "other_weights": [
+        "1000g",
+        "2000g",
+        "2275g"
+      ],
+      "servings": 50,
+      "protein_per_serving_g": 22.6,
+      "calories_per_serving": 114,
+      "min_price_toman": 10200000,
+      "max_price_toman": 14630000,
+      "avg_price_toman": 12415000,
+      "price_per_kg_toman": 8276667,
+      "price_per_g_protein_toman": 10987,
+      "user_rating": 3.9,
+      "total_votes": 374,
+      "satisfaction_rate_percent": 90.0,
+      "lactose_free": false,
+      "gluten_free": false,
+      "acne_risk": "High",
+      "digestive_compatibility": "متوسط (ایجاد نفخ در افراد حساس به شیر)",
+      "solubility": "خوب (بهترین طعم با شیر)",
+      "top_flavors": [
+        "شکلات",
+        "وانیل فرانسوی"
+      ],
+      "fitness_goals": [
+        "حجم‌گیری حرفه‌ای",
+        "ریکاوری سریع"
+      ],
+      "pros": [
+        "قوی‌ترین عملکرد عضله‌سازی و ریکاوری در میان برندهای داروخانه‌ای تحت لیسانس",
+        "ماتریکس سه‌گانه با ۸۴٪ پروتئین و ۳۰ تا ۴۰ درصد ارزان‌تر از اپتیموم"
+      ],
+      "cons": [
+        "گزارش بروز جوش‌های پوستی شدید در برخی مصرف‌کنندگان پس از یک ماه",
+        "ایجاد نفخ برای افراد حساس به لاکتوز و شیرینی نسبتاً بالا"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-21",
+      "brand_fa": "کیو ان تی",
+      "brand_en": "QNT",
+      "model": "دلیشس وی (Delicious Whey)",
+      "supply_category": "تحت لیسانس (داروخانه‌ای)",
+      "origin_manufacturer": "بلژیک - بسته‌بندی رسمی داخل",
+      "whey_type": "Triple Blend (Gluten-Free)",
+      "whey_type_fa": "سه‌گانه فاقد گلوتن",
+      "base_weight_g": 1000,
+      "other_weights": [
+        "2200g"
+      ],
+      "servings": 33,
+      "protein_per_serving_g": 22.0,
+      "calories_per_serving": 119,
+      "min_price_toman": 6840000,
+      "max_price_toman": 7500000,
+      "avg_price_toman": 7170000,
+      "price_per_kg_toman": 7170000,
+      "price_per_g_protein_toman": 9876,
+      "user_rating": 3.5,
+      "total_votes": 120,
+      "satisfaction_rate_percent": 78.0,
+      "lactose_free": false,
+      "gluten_free": true,
+      "acne_risk": "Low",
+      "digestive_compatibility": "خوب (فاقد گلوتن)",
+      "solubility": "بسیار خوب",
+      "top_flavors": [
+        "شکلات",
+        "وانیل",
+        "توت‌فرنگی"
+      ],
+      "fitness_goals": [
+        "اولویت طعم",
+        "حساسیت به گلوتن"
+      ],
+      "pros": [
+        "بهترین انتخاب برای افرادی که طعم برایشان اولویت اول است",
+        "فاقد گلوتن و دارای ترکیب سه‌گانه پروتئینی"
+      ],
+      "cons": [
+        "۲۲ گرم پروتئین و ۲.۱ گرم چربی در هر سروینگ"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-22",
+      "brand_fa": "کیو ان تی",
+      "brand_en": "QNT",
+      "model": "متاپیور زیرو کرب (Metapure Zero Carb)",
+      "supply_category": "تحت لیسانس (داروخانه‌ای)",
+      "origin_manufacturer": "بلژیک - بسته‌بندی رسمی داخل",
+      "whey_type": "WPI Ultra Pure (Zero Carb)",
+      "whey_type_fa": "ایزوله فوق خالص بدون کربوهیدرات",
+      "base_weight_g": 1000,
+      "other_weights": [
+        "1000g"
+      ],
+      "servings": 33,
+      "protein_per_serving_g": 25.0,
+      "calories_per_serving": 100,
+      "min_price_toman": 11610000,
+      "max_price_toman": 12900000,
+      "avg_price_toman": 12255000,
+      "price_per_kg_toman": 12255000,
+      "price_per_g_protein_toman": 14855,
+      "user_rating": 4.1,
+      "total_votes": 185,
+      "satisfaction_rate_percent": 91.0,
+      "lactose_free": true,
+      "gluten_free": true,
+      "acne_risk": "Low",
+      "digestive_compatibility": "فوق‌العاده (تجویز اول داروسازان برای گوارش حساس)",
+      "solubility": "فوق‌العاده",
+      "top_flavors": [
+        "شکلات",
+        "وانیل",
+        "توت‌فرنگی"
+      ],
+      "fitness_goals": [
+        "دوره کات سنگین",
+        "جراحی اسلیو معده",
+        "دیابت و حساسیت گوارشی"
+      ],
+      "pros": [
+        "بالاترین امتیاز رضایت در داروکده (۴.۱ از ۵)",
+        "ایزوله فوق‌خالص با کربوهیدرات صفر، طلایی‌ترین گزینه برای اسلیو معده و دیابت"
+      ],
+      "cons": [
+        "قیمت نسبتاً بالا برای قوطی ۱ کیلوگرمی"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-23",
+      "brand_fa": "بی پی آی اسپورت",
+      "brand_en": "BPI Sports",
+      "model": "وی اچ دی / ایزو اچ دی (Whey HD / Iso HD)",
+      "supply_category": "تحت لیسانس (داروخانه‌ای)",
+      "origin_manufacturer": "آمریکا - توزیع رسمی داروخانه‌ای",
+      "whey_type": "Blend / WPI",
+      "whey_type_fa": "ترکیبی / ایزوله خالص",
+      "base_weight_g": 1900,
+      "other_weights": [
+        "736g",
+        "777g",
+        "1850g",
+        "2208g"
+      ],
+      "servings": 50,
+      "protein_per_serving_g": 25.0,
+      "calories_per_serving": 120,
+      "min_price_toman": 18500000,
+      "max_price_toman": 25800000,
+      "avg_price_toman": 22150000,
+      "price_per_kg_toman": 11657895,
+      "price_per_g_protein_toman": 17720,
+      "user_rating": 4.3,
+      "total_votes": 240,
+      "satisfaction_rate_percent": 89.0,
+      "lactose_free": true,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "خوب",
+      "solubility": "عالی",
+      "top_flavors": [
+        "شیر و بیسکوئیت",
+        "وانیل کارامل",
+        "کیک شکلاتی",
+        "کره بادام‌زمینی"
+      ],
+      "fitness_goals": [
+        "شوک عضله‌سازی حرفه‌ای",
+        "دوره کات (مدل Iso HD)"
+      ],
+      "pros": [
+        "شوک عضله‌سازی بسیار قوی‌تر در مقایسه با برندهای ایرانی",
+        "طعم‌های بسیار خاص و مهندسی‌شده آمریکایی"
+      ],
+      "cons": [
+        "شیرینی زیاد در برخی طعم‌ها",
+        "قیمت سنگین در اوزان بالای ۲ کیلوگرم"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-24",
+      "brand_fa": "آیرون مکس",
+      "brand_en": "IronMaxx",
+      "model": "پروتئین وی ۱۰۰٪ و کلیر وی زیرو",
+      "supply_category": "تحت لیسانس (داروخانه‌ای)",
+      "origin_manufacturer": "آلمان - توزیع رسمی داروخانه‌ای",
+      "whey_type": "Water-Based WPC / Clear WPI",
+      "whey_type_fa": "وی پایه آبی / کلیر وی ایزوله",
+      "base_weight_g": 1000,
+      "other_weights": [
+        "900g (کلیر وی)",
+        "1500g",
+        "2350g"
+      ],
+      "servings": 33,
+      "protein_per_serving_g": 23.5,
+      "calories_per_serving": 110,
+      "min_price_toman": 8500000,
+      "max_price_toman": 14760000,
+      "avg_price_toman": 11630000,
+      "price_per_kg_toman": 11630000,
+      "price_per_g_protein_toman": 14997,
+      "user_rating": 3.9,
+      "total_votes": 160,
+      "satisfaction_rate_percent": 83.0,
+      "lactose_free": true,
+      "gluten_free": true,
+      "acne_risk": "Low",
+      "digestive_compatibility": "عالی (مهندسی‌شده بر پایه آب)",
+      "solubility": "فوق‌العاده در آب خالص",
+      "top_flavors": [
+        "شکلات تلخ اکوادور",
+        "پرتقال (کلیر وی)"
+      ],
+      "fitness_goals": [
+        "مصرف با آب خالص",
+        "رژیم کم‌کالری و کات"
+      ],
+      "pros": [
+        "حلالیت و طعم فوق‌العاده در آب خالص بدون نیاز به شیر",
+        "طعم بی‌نظیر شکلات تلخ اکوادور و مدل میوه‌ای کلیر وی"
+      ],
+      "cons": [
+        "قیمت بالا در نسخه کلیر وی ایزوله ۹۰۰ گرمی"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-25",
+      "brand_fa": "اس ان ان",
+      "brand_en": "SNN (Super Natural Nutrition)",
+      "model": "سوپر نچرال وی (SNN Whey)",
+      "supply_category": "تحت لیسانس (داروخانه‌ای)",
+      "origin_manufacturer": "آمریکا - شرکت سونا طب پارسه",
+      "whey_type": "Blend (WPC + WPI)",
+      "whey_type_fa": "کنسانتره + ایزوله",
+      "base_weight_g": 2002,
+      "other_weights": [
+        "2270g"
+      ],
+      "servings": 60,
+      "protein_per_serving_g": 24.0,
+      "calories_per_serving": 150,
+      "min_price_toman": 14500000,
+      "max_price_toman": 17740800,
+      "avg_price_toman": 16120400,
+      "price_per_kg_toman": 8052148,
+      "price_per_g_protein_toman": 11195,
+      "user_rating": 3.8,
+      "total_votes": 148,
+      "satisfaction_rate_percent": 82.6,
+      "lactose_free": false,
+      "gluten_free": false,
+      "acne_risk": "Low",
+      "digestive_compatibility": "متوسط",
+      "solubility": "ضعیف در برخی بچ‌ها (گلوله‌شدن و بافت گچی)",
+      "top_flavors": [
+        "توت‌فرنگی",
+        "شکلات"
+      ],
+      "fitness_goals": [
+        "افزایش حجم",
+        "ایجاد سیری پس از تمرین"
+      ],
+      "pros": [
+        "ایجاد حس سیری ۲ ساعته پس از تمرین",
+        "عطر خوب در طعم توت‌فرنگی"
+      ],
+      "cons": [
+        "شکایات تند کاربران از گلوله‌شدن شدید و بافت گچی در برخی بچ‌ها",
+        "کالری بالاتر در هر سروینگ (۱۵۰ کالری)",
+        "ارسال مکرر طعم اشتباه (شکلات به جای وانیل) توسط فروشندگان"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-26",
+      "brand_fa": "نوترابایو",
+      "brand_en": "NutraBio",
+      "model": "پروتئین وی ایزوله ۱۰۰٪",
+      "supply_category": "تحت لیسانس (داروخانه‌ای)",
+      "origin_manufacturer": "آمریکا - توزیع رسمی داروخانه‌ای",
+      "whey_type": "WPI 100%",
+      "whey_type_fa": "ایزوله ۱۰۰٪ خالص",
+      "base_weight_g": 907,
+      "other_weights": [
+        "907g"
+      ],
+      "servings": 30,
+      "protein_per_serving_g": 25.0,
+      "calories_per_serving": 100,
+      "min_price_toman": 17392700,
+      "max_price_toman": 18701800,
+      "avg_price_toman": 18047250,
+      "price_per_kg_toman": 19897740,
+      "price_per_g_protein_toman": 24063,
+      "user_rating": 4.4,
+      "total_votes": 70,
+      "satisfaction_rate_percent": 90.0,
+      "lactose_free": true,
+      "gluten_free": true,
+      "acne_risk": "Low",
+      "digestive_compatibility": "فوق‌العاده (فاقد لاکتوز، گلوتن و فیلر)",
+      "solubility": "عالی",
+      "top_flavors": [
+        "وانیل آلپاین",
+        "شکلات کره بادام‌زمینی",
+        "کوکی بستنی"
+      ],
+      "fitness_goals": [
+        "دوره کات حرفه‌ای",
+        "معده حساس"
+      ],
+      "pros": [
+        "خلوص استثنایی بدون هرگونه فیلر و افزودنی مخفی",
+        "طعم‌های پریمیوم و حلالیت عالی"
+      ],
+      "cons": [
+        "قیمت بسیار گران برای وزن ۹۰۷ گرم"
+      ],
+      "ttac_verified": true
+    },
+    {
+      "id": "WP-27",
+      "brand_fa": "اپلاید نوتریشن",
+      "brand_en": "Applied Nutrition",
+      "model": "کریتیکال وی (Critical Whey)",
+      "supply_category": "وارداتی (بازار آزاد)",
+      "origin_manufacturer": "انگلستان (UK)",
+      "whey_type": "Triple Blend (WPC + WPI + WPH)",
+      "whey_type_fa": "سه‌گانه اولترافیلتر (کنسانتره + ایزوله + هیدرولیزه)",
+      "base_weight_g": 2000,
+      "other_weights": [
+        "450g",
+        "825g",
+        "900g",
+        "1800g"
+      ],
+      "servings": 61,
+      "protein_per_serving_g": 24.0,
+      "calories_per_serving": 120,
+      "min_price_toman": 19380000,
+      "max_price_toman": 21000000,
+      "avg_price_toman": 20190000,
+      "price_per_kg_toman": 10095000,
+      "price_per_g_protein_toman": 13791,
+      "user_rating": 4.7,
+      "total_votes": 530,
+      "satisfaction_rate_percent": 94.0,
+      "lactose_free": false,
+      "gluten_free": true,
+      "acne_risk": "Low",
+      "digestive_compatibility": "عالی (بدون گلوتن و هضم راحت)",
+      "solubility": "فوری و بدون بافت گچی",
+      "top_flavors": [
+        "چاکو بوئنو",
+        "میلک‌شیک توت‌فرنگی",
+        "وانیل"
+      ],
+      "fitness_goals": [
+        "ورزشکاران حرفه‌ای و قهرمانی",
+        "افزایش حجم و ریکاوری سریع"
+      ],
+      "pros": [
+        "دارای تاییدیه جهانی ضد دوپینگ Informed-Sport",
+        "امتیاز جهانی ۴.۷ از ۵ در Trustpilot با طعم و حلالیت بی‌نظیر",
+        "۶۱ سروینگ در بسته ۲ کیلویی (ارزش خرید بالا در رده وارداتی)"
+      ],
+      "cons": [
+        "عرضه در بازار آزاد (نیازمند خرید از فروشگاه‌های تخصصی معتبر جهت اطمینان از اصالت)"
+      ],
+      "ttac_verified": false
+    },
+    {
+      "id": "WP-28",
+      "brand_fa": "اپتیموم نوتریشن (ON)",
+      "brand_en": "Optimum Nutrition",
+      "model": "وی گلد استاندارد ۱۰۰٪ (Gold Standard)",
+      "supply_category": "وارداتی (بازار آزاد)",
+      "origin_manufacturer": "آمریکا (USA)",
+      "whey_type": "Blend (WPI + WPC + Hydrolyzed Peptides)",
+      "whey_type_fa": "ایزوله + کنسانتره + پپتید هیدرولیزه",
+      "base_weight_g": 2270,
+      "other_weights": [
+        "908g"
+      ],
+      "servings": 74,
+      "protein_per_serving_g": 24.0,
+      "calories_per_serving": 120,
+      "min_price_toman": 29500000,
+      "max_price_toman": 49450000,
+      "avg_price_toman": 39475000,
+      "price_per_kg_toman": 17389868,
+      "price_per_g_protein_toman": 22227,
+      "user_rating": 4.8,
+      "total_votes": 1200,
+      "satisfaction_rate_percent": 96.0,
+      "lactose_free": false,
+      "gluten_free": true,
+      "acne_risk": "Low",
+      "digestive_compatibility": "عالی (حاوی آنزیم گوارشی آمینوژن)",
+      "solubility": "فوری (استاندارد طلایی جهان)",
+      "top_flavors": [
+        "دبل ریچ چاکلت",
+        "وانیل بستنی",
+        "راکی رود"
+      ],
+      "fitness_goals": [
+        "معیار طلایی عضله‌سازی",
+        "ورزشکاران حرفه‌ای"
+      ],
+      "pros": [
+        "معیار طلایی کیفیت، طعم و حلالیت در جهان",
+        "حاوی ایزوله به عنوان منبع اول پروتئین به همراه آنزیم آمینوژن"
+      ],
+      "cons": [
+        "قیمت فوق‌العاده سنگین (۳۰ تا ۴۹ میلیون تومان)",
+        "بالاترین ریسک وجود نمونه‌های تقلبی در بازار آزاد ایران"
+      ],
+      "ttac_verified": false
+    },
+    {
+      "id": "WP-29",
+      "brand_fa": "ماسل اسپرت",
+      "brand_en": "MuscleSport",
+      "model": "لین وی ایزو هیدرو (Lean Whey Iso Hydro)",
+      "supply_category": "وارداتی (بازار آزاد)",
+      "origin_manufacturer": "آمریکا (USA)",
+      "whey_type": "WPI + WPH + Fat Burner Matrix",
+      "whey_type_fa": "ایزوله + هیدرولیزه + ماتریکس چربی‌سوز",
+      "base_weight_g": 2275,
+      "other_weights": [
+        "2275g (65 Servings)"
+      ],
+      "servings": 65,
+      "protein_per_serving_g": 25.0,
+      "calories_per_serving": 110,
+      "min_price_toman": 32800000,
+      "max_price_toman": 35600000,
+      "avg_price_toman": 34200000,
+      "price_per_kg_toman": 15032967,
+      "price_per_g_protein_toman": 21046,
+      "user_rating": 4.8,
+      "total_votes": 190,
+      "satisfaction_rate_percent": 95.0,
+      "lactose_free": true,
+      "gluten_free": true,
+      "acne_risk": "Low",
+      "digestive_compatibility": "فوق‌العاده (فیلتراسیون سرد)",
+      "solubility": "عالی",
+      "top_flavors": [
+        "بستنی پسته",
+        "مارشمالو",
+        "پاستیلی",
+        "شکلات"
+      ],
+      "fitness_goals": [
+        "کات حرفه‌ای و چربی‌سوزی همزمان",
+        "مصرف لوکس"
+      ],
+      "pros": [
+        "حاوی ماتریکس چربی‌سوز (ال-کارنیتین، CLA و MCT)",
+        "طعم‌های منحصربه‌فرد با تکه‌های واقعی غلات و مارشمالو",
+        "۶۵ سروینگ ۲۵ گرمی ایزوله و هیدرولیزه"
+      ],
+      "cons": [
+        "قیمت بسیار بالا (بیش از ۳۳ میلیون تومان) و کمیاب بودن"
+      ],
+      "ttac_verified": false
+    },
+    {
+      "id": "WP-30",
+      "brand_fa": "کوین لورون",
+      "brand_en": "Kevin Levrone",
+      "model": "گلد وی (Gold Whey)",
+      "supply_category": "وارداتی (بازار آزاد)",
+      "origin_manufacturer": "لهستان (Poland)",
+      "whey_type": "Microfiltered WPC",
+      "whey_type_fa": "کنسانتره میکروفیلتر شده",
+      "base_weight_g": 2000,
+      "other_weights": [
+        "908g"
+      ],
+      "servings": 66,
+      "protein_per_serving_g": 22.0,
+      "calories_per_serving": 115,
+      "min_price_toman": 19490000,
+      "max_price_toman": 20400000,
+      "avg_price_toman": 19945000,
+      "price_per_kg_toman": 9972500,
+      "price_per_g_protein_toman": 13736,
+      "user_rating": 4.4,
+      "total_votes": 210,
+      "satisfaction_rate_percent": 88.0,
+      "lactose_free": false,
+      "gluten_free": true,
+      "acne_risk": "Low",
+      "digestive_compatibility": "خوب (فیبر بالا و بدون گلوتن)",
+      "solubility": "عالی",
+      "top_flavors": [
+        "شکلات",
+        "کوکی",
+        "توت‌فرنگی"
+      ],
+      "fitness_goals": [
+        "عضله‌سازی",
+        "پخت پنکیک و دسرهای رژیمی"
+      ],
+      "pros": [
+        "قند بسیار پایین (۱ گرم) و فیبر بالا",
+        "بافت فوق‌العاده برای پخت پنکیک و دسرهای پروتئینی",
+        "۶۶ سروینگ در قوطی ۲ کیلویی"
+      ],
+      "cons": [
+        "۲۲ گرم پروتئین در هر سروینگ",
+        "نیازمند خرید از فروشگاه معتبر جهت اطمینان از اصالت"
+      ],
+      "ttac_verified": false
+    }
+  ],
+  "recommender_engine": [
+    {
+      "rule_id": "REC-01",
+      "goal_title": "دوره کات، چربی‌سوزی خشک و رژیم‌های کم‌کالری",
+      "filter_logic": "whey_type contains 'WPI' AND calories_per_serving <= 115",
+      "top_quality_ids": [
+        "WP-29",
+        "WP-22",
+        "WP-23",
+        "WP-26"
+      ],
+      "best_value_ids": [
+        "WP-04",
+        "WP-11",
+        "WP-17",
+        "WP-14"
+      ],
+      "scientific_reason": "خلوص پروتئین بالای ۹۰٪، کربوهیدرات و چربی نزدیک به صفر (حدود ۱۰۰ کالری در هر وعده) و حضور ماتریکس چربی‌سوز در لین وی.",
+      "user_alert": "در دوره کات، پروتئین وی را حتماً با آب ولرم مصرف کنید تا کالری و قند شیر (لاکتوز) اضافه وارد رژیم نشود."
+    },
+    {
+      "rule_id": "REC-02",
+      "goal_title": "عدم تحمل لاکتوز، معده حساس، دیابت و جراحی اسلیو معده",
+      "filter_logic": "lactose_free == true",
+      "top_quality_ids": [
+        "WP-22",
+        "WP-13",
+        "WP-24",
+        "WP-26"
+      ],
+      "best_value_ids": [
+        "WP-18",
+        "WP-01",
+        "WP-03",
+        "WP-02"
+      ],
+      "scientific_reason": "حذف کامل لاکتوز و گلوتن یا افزودن آنزیم لاکتاز و پری‌بیوتیک اینولین جهت جلوگیری از نفخ، کرامپ شکمی و نوسان قند خون.",
+      "user_alert": "برای بیماران پس از جراحی اسلیو معده، صرفاً ایزوله‌های خالص (متاپیور QNT، ویثر ایزوله، کارن ایزو وی یا ساشه فست میل مکس پرو) مجاز است."
+    },
+    {
+      "rule_id": "REC-03",
+      "goal_title": "افزایش حجم عضلانی و ریکاوری حرفه‌ای (ترکیب سه‌گانه)",
+      "filter_logic": "whey_type contains 'Blend' AND protein_per_serving_g >= 22.5",
+      "top_quality_ids": [
+        "WP-27",
+        "WP-28",
+        "WP-20",
+        "WP-23"
+      ],
+      "best_value_ids": [
+        "WP-19",
+        "WP-21",
+        "WP-09",
+        "WP-03"
+      ],
+      "scientific_reason": "بهره‌گیری از ماتریکس ترکیبی (هیدرولیزه + ایزوله + کنسانتره) برای تزریق پیوسته و چندمرحله‌ای آمینواسیدها و BCAA به عضلات.",
+      "user_alert": "افراد دارای پوست مستعد آکنه و جوش، در مصرف وی ترک نوتریشن و ژن استار احتیاط کنند و برندهایی نظیر کاله، پگاه یا اپلاید را جایگزین نمایند."
+    },
+    {
+      "rule_id": "REC-04",
+      "goal_title": "مصرف روزمره، مبتدیان و بالاترین صرفه اقتصادی",
+      "filter_logic": "price_per_g_protein_toman <= 8500",
+      "top_quality_ids": [
+        "WP-01",
+        "WP-02",
+        "WP-05"
+      ],
+      "best_value_ids": [
+        "WP-06",
+        "WP-15",
+        "WP-16",
+        "WP-12"
+      ],
+      "scientific_reason": "کمترین قیمت تمام‌شده به ازای هر ۱ گرم پروتئین خالص، تضمین اصالت ۱۰۰٪ در شبکه لبنی و داروخانه‌ای.",
+      "user_alert": "برای استعلام برچسب اصالت تی‌تک روی محصولات داخلی، لایه اسکرچ را به آرامی با ناخن (و نه کلید فلزی) بخراشید تا کد ۱۶ رقمی مخدوش نشود."
+    }
+  ]
+}

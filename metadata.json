@@ -1,0 +1,6 @@
+{
+  "name": "برنامه تغذیه اسپارتینا و بدنسازی",
+  "description": "سامانه تخصصی برنامه‌ریزی تغذیه، درمان چاقی با اسپارتینا (تیرزپاتاید)، بدنسازی و طب ایرانی دکتر حسن صادقی",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
