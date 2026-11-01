@@ -880,6 +880,49 @@ const SLOT_FA = { breakfast: 'صبحانه', snack1: 'میان‌وعده‌ی �
 const SLOT_TYPE = { breakfast: 'breakfast', snack1: 'snack', lunch: 'lunch', snack2: 'snack', dinner: 'dinner', snack3: 'snack', pre: 'pre' };
 const SLOT_ICON = { breakfast: '☀', snack1: '◐', lunch: '◉', snack2: '◑', dinner: '☾', snack3: '✦', pre: '⚡' };
 
+const BB_FOOD_CATEGORIES = [
+  {
+    title: '🍗 پروتئین‌ها (گوشت، مرغ، ماهی، تخم‌مرغ، لبنیات، حبوبات)',
+    items: [
+      ['F01', 'سینه مرغ'], ['F02', 'جوجه‌کباب'], ['F03', 'بوقلمون'], ['N56', 'ران مرغ'],
+      ['F04', 'فیله گوساله'], ['F05', 'گوشت چرخ‌کرده'], ['N57', 'گوشت گوسفندی'],
+      ['F06', 'قزل‌آلا'], ['F07', 'سالمون'], ['F08', 'تن ماهی'],
+      ['F09', 'تخم‌مرغ کامل'], ['F10', 'سفیده تخم‌مرغ'],
+      ['IR01', 'کشک خشک سنتی'], ['IR02', 'کشک مایع'],
+      ['F17', 'سویا'], ['F18', 'عدس'], ['F20', 'لوبیا قرمز'], ['F21', 'لوبیا چیتی'],
+      ['F15', 'پنیر کاتیج'], ['F14', 'پنیر سفید'], ['F12', 'ماست یونانی'], ['F16', 'پودر وی']
+    ]
+  },
+  {
+    title: '🍚 کربوهیدرات‌ها و غلات (برنج، جو دوسر، سیب‌زمینی، نان)',
+    items: [
+      ['F22', 'برنج سفید'], ['F23', 'برنج قهوه‌ای'], ['F24', 'جو دوسر (اوتمیل)'],
+      ['F25', 'ماکارونی'], ['N68', 'ماکارونی سبوس‌دار'],
+      ['F26', 'سیب‌زمینی آب‌پز'], ['F27', 'سیب‌زمینی شیرین'],
+      ['F31', 'نان سنگک'], ['F32', 'نان بربری'], ['F35', 'نان جو'], ['F36', 'نان تست سبوس‌دار'],
+      ['F28', 'کینوا'], ['N66', 'بلغور']
+    ]
+  },
+  {
+    title: '🥑 چربی‌های سالم و مغزها',
+    items: [
+      ['F40', 'کره بادام‌زمینی'], ['F42', 'روغن زیتون'],
+      ['F38', 'بادام درختی'], ['F39', 'گردو'], ['N47', 'فندق'],
+      ['N48', 'تخمه آفتابگردان'], ['IR17', 'دانه چیا']
+    ]
+  },
+  {
+    title: '🥦 سبزیجات و میوه‌ها',
+    items: [
+      ['N12', 'کلم بروکلی'], ['N13', 'لوبیا سبز'], ['N14', 'قارچ'],
+      ['N03', 'کاهو رومی'], ['N01', 'خیار'], ['N02', 'گوجه‌فرنگی'],
+      ['N06', 'فلفل دلمه‌ای'], ['N04', 'هویج'], ['F45', 'اسفناج'],
+      ['F29', 'موز'], ['F30', 'خرما'], ['N27', 'سیب'], ['N37', 'توت‌فرنگی'], ['F46', 'بلوبری']
+    ]
+  }
+];
+
+
 /* بانک جامع تحلیلی مکمل‌های پروتئین وی بازار ایران */
 const WHEY_DATABASE = {
   "metadata": {
@@ -6689,8 +6732,9 @@ const BB_GOAL = {
 };
 const BB_TIME = { morning: 'صبح', noon: 'ظهر', afternoon: 'عصر', evening: 'شب' };
 const bbOf = p => {
-  const b = Object.assign({ goal: 'recomp', days: [0, 2, 4], time: 'afternoon', bf: '', ppk: '', sup: {}, micOff: {}, detox: { on: false, days: 14 } }, p.bb || {});
+  const b = Object.assign({ goal: 'recomp', days: [0, 2, 4], time: 'afternoon', bf: '', ppk: '', sup: {}, micOff: {}, detox: { on: false, days: 14 }, foods: [] }, p.bb || {});
   if (b.creatine && b.sup.creatine == null) b.sup = { ...b.sup, creatine: true }; // پرونده‌های نسخه‌ی قبل
+  if (!Array.isArray(b.foods)) b.foods = [];
   return b;
 };
 /* مکمل‌های ورزشی انتخاب‌شده توسط پزشک */
@@ -6917,7 +6961,7 @@ function rawEq(id, g) {
 }
 
 /* یک الگو را برای بیمار قابل اجرا می‌کند (انتخاب غذا از هر مخزن) */
-function instantiate(tpl, ok, R, prefer, used) {
+function instantiate(tpl, ok, R, prefer, used, userFoods) {
   const items = [];
   for (const c of tpl.c) {
     let cand = poolList(c.p).filter(id => ok[id]);
@@ -6925,6 +6969,18 @@ function instantiate(tpl, ok, R, prefer, used) {
     let fb = false;
     if (!cand.length && !c.opt && FALLBACK[c.r]) { cand = FALLBACK[c.r].filter(id => ok[id]); fb = true; }
     if (!cand.length) { if (c.opt) continue; return null; }
+
+    // اگر کاربر در بدنسازی سبد غذایی اختصاصی انتخاب کرده:
+    if (userFoods && userFoods.length > 0) {
+      const direct = cand.filter(id => userFoods.includes(id));
+      if (direct.length > 0) {
+        cand = direct;
+      } else if (['P', 'C'].includes(c.r)) {
+        const roleMatches = userFoods.filter(id => ok[id] && (c.r === 'P' ? nv(id, 'p') >= 7 : nv(id, 'c') >= 15));
+        if (roleMatches.length > 0) cand = roleMatches;
+      }
+    }
+
     // ترجیح: غذاهایی که اخیراً استفاده نشده‌اند و برچسب ترجیحی دارند
     const w = cand.map(id => {
       let x = 1;
@@ -7019,12 +7075,13 @@ function regenMeal(p, T, meal) {
   const { ok } = allowedFoods(p, T);
   const R = rng(Date.now());
   const prefer = preferSet(p, T);
+  const userFoods = p.prog === 'bb' && p.bb && Array.isArray(p.bb.foods) && p.bb.foods.length > 0 ? p.bb.foods : null;
   const list = TEMPLATES[SLOT_TYPE[meal.slot]].filter(t => tplAllowed(t, meal.slot, p));
   list.sort(() => R() - 0.5);
   if (meal.post) list.sort((a, b) => ((b.tags || []).includes('post') - (a.tags || []).includes('post')));
   list.sort((a, b) => (a.id === meal.tpl) - (b.id === meal.tpl));
   for (const t of list) {
-    let items = instantiate(t, ok, R, prefer, null);
+    let items = instantiate(t, ok, R, prefer, null, userFoods);
     if (!items) continue;
     items = sizeMeal(items, T.kcal * meal.share, T.prot * meal.share, T.fat * meal.share, scaleOf(T));
     return { slot: meal.slot, tpl: t.id, name: mealName(t, items), share: meal.share, post: meal.post, items };
@@ -7041,6 +7098,7 @@ function generatePlan(p, T, seed) {
   const prefer = preferSet(p, T);
   const usedFood = {}, usedTpl = {};
   const days = [];
+  const userFoods = p.prog === 'bb' && p.bb && Array.isArray(p.bb.foods) && p.bb.foods.length > 0 ? p.bb.foods : null;
   for (let d = 0; d < 7; d++) {
     const meals = [], today = new Set();
     const train = isTrainDay(p, d);
@@ -7056,6 +7114,10 @@ function generatePlan(p, T, seed) {
         if (post && (t.tags || []).includes('post')) w *= 3;
         if (t.need && (se.constipation || se.nausea)) w *= 2;
         if (today.has(t.id)) w *= 0.05;
+        if (userFoods && t.c) {
+          const hasFav = t.c.some(comp => poolList(comp.p).some(fid => userFoods.includes(fid)));
+          if (hasFav) w *= 3.5;
+        }
         return [t, w];
       });
       let chosen = null, items = null;
@@ -7064,7 +7126,7 @@ function generatePlan(p, T, seed) {
         let s = R() * tot;
         for (const [t, w] of scored) { s -= w; if (s <= 0) { chosen = t; break; } }
         if (!chosen) chosen = scored[scored.length - 1][0];
-        items = instantiate(chosen, ok, R, prefer, usedFood);
+        items = instantiate(chosen, ok, R, prefer, usedFood, userFoods);
         if (!items) { const ix = scored.findIndex(x => x[0] === chosen); if (ix >= 0) scored.splice(ix, 1); chosen = null; if (!scored.length) break; }
       }
       if (!items) continue;
@@ -7111,7 +7173,12 @@ function weekAvg(plan) {
 function swapOptions(p, T, id) {
   const { ok } = allowedFoods(p, T);
   const fam = SWAP_FAMILY[META[id].g] || [META[id].g];
-  return Object.keys(META).filter(x => x !== id && ok[x] && fam.includes(META[x].g));
+  const userFoods = p.prog === 'bb' && p.bb && Array.isArray(p.bb.foods) ? p.bb.foods : [];
+  const list = Object.keys(META).filter(x => x !== id && ok[x] && fam.includes(META[x].g));
+  if (userFoods.length > 0) {
+    list.sort((a, b) => (userFoods.includes(b) ? 1 : 0) - (userFoods.includes(a) ? 1 : 0));
+  }
+  return list;
 }
 
 /* جانشینی هم‌ارز: پروتئین برای نقش P، چربی برای F، انرژی برای بقیه */
@@ -9849,7 +9916,7 @@ function exportIntake(kind) {
 function intakeReply() {
   const p = {};
   IN_FIELDS.forEach(k => { if (P[k] !== undefined) p[k] = P[k]; });
-  if (P.prog === 'bb') { const b = bbOf(P); p.bb = { goal: b.goal, days: b.days, time: b.time, bf: b.bf }; }
+  if (P.prog === 'bb') { const b = bbOf(P); p.bb = { goal: b.goal, days: b.days, time: b.time, bf: b.bf, foods: b.foods || [] }; }
   return { type: 'spartina-intake-reply', v: 1, sent: Date.now(), patient: p };
 }
 // کد متنی پاسخ: «SPI1:» + base64 متن JSON (UTF-8)
@@ -10226,6 +10293,28 @@ function tabTrain() {
     <div class="sub">ساعت تمرین</div><div class="chips">${pick('bb.time', 'morning', 'صبح', '۶ تا ۱۰')}${pick('bb.time', 'noon', 'ظهر', '۱۰ تا ۱۴')}${pick('bb.time', 'afternoon', 'عصر', '۱۴ تا ۱۸')}${pick('bb.time', 'evening', 'شب', '۱۸ به بعد')}</div>
     <div class="alert teal" style="margin-top:14px">در روزهای تمرین یک وعده‌ی «قبل از تمرین» حدود ۱ تا ۲ ساعت پیش از تمرین، و وعده‌ی اصلی بعدی به‌عنوان «بعد از تمرین» با پروتئین و کربوهیدرات بیشتر چیده می‌شود.</div>
     <div class="sub">سطح فعالیت کل روز (با احتساب تمرین)</div><div class="chips">${ACT.map((a, i) => pick('activity', i, a.t, a.d)).join('')}</div></section>
+    <section class="card">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:6px">
+        <h2 style="margin:0">سبد غذاهای انتخابی شما در برنامه بدنسازی</h2>
+        <span style="font-size:12px;color:var(--muted);background:var(--saffs);padding:3px 10px;border-radius:999px;border:1px solid #F6D9A5">${b.foods && b.foods.length ? fa(b.foods.length) + ' قلم غذا برگزیده شده' : 'همه غذاها (انتخاب خودکار)'}</span>
+      </div>
+      <p class="lead">دقیقاً غذاهایی را که می‌خواهید در وعده‌های روزانه شما باشد تیک بزنید؛ موتور هوشمند برنامه، رژیم شما را منحصراً از میان همین غذاها (متناسب با توان مالی و سلیقه غذایی شما) با مقادیر گرمی استاندارد می‌چیند.</p>
+      <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px">
+        <button type="button" class="btn sm ghost" data-bbpreset="classic">⚡️ کلاسیک بدنسازی (مرغ، برنج، سفیده، جودوسر)</button>
+        <button type="button" class="btn sm ghost" data-bbpreset="budget">💰 اقتصادی و کم‌هزینه (تخم‌مرغ، کشک، عدس، سیب‌زمینی)</button>
+        <button type="button" class="btn sm ghost" data-bbpreset="premium">⭐ پریمیوم (فیله گوساله، سالمون، بوقلمون، وی)</button>
+        <button type="button" class="btn sm ghost" data-bbpreset="clear">🔄 پاک کردن همه (انتخاب آزاد و خودکار)</button>
+      </div>
+      ${(typeof BB_FOOD_CATEGORIES !== 'undefined' ? BB_FOOD_CATEGORIES : []).map(cat => `
+        <div class="sub" style="margin-top:10px">${cat.title}</div>
+        <div class="chips">
+          ${cat.items.map(([fid, name]) => {
+            const on = (b.foods || []).includes(fid);
+            return `<span class="chip ${on ? 'on' : ''}" data-bbfood="${fid}">${on ? '✓ ' : '＋ '}${name}</span>`;
+          }).join('')}
+        </div>
+      `).join('')}
+    </section>
     ${IN ? '' : `<section class="card">
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:6px">
         <h2 style="margin:0">مکمل‌های ورزشی <span class="draft">با تأیید پزشک</span></h2>
@@ -10642,6 +10731,38 @@ document.addEventListener('click', e => {
     return;
   }
   if (d.bbday != null) { P.bb = bbOf(P); const i = +d.bbday, s = new Set(P.bb.days); s.has(i) ? s.delete(i) : s.add(i); P.bb.days = [...s].sort(); }
+  else if (d.bbfood != null) {
+    P.bb = bbOf(P);
+    const fid = d.bbfood;
+    const s = new Set(P.bb.foods || []);
+    s.has(fid) ? s.delete(fid) : s.add(fid);
+    P.bb.foods = [...s];
+    P.plan = null;
+    persist(true);
+    const y = scrollY;
+    renderMain();
+    scrollTo(0, y);
+    return;
+  }
+  else if (d.bbpreset != null) {
+    P.bb = bbOf(P);
+    if (d.bbpreset === 'clear') {
+      P.bb.foods = [];
+    } else if (d.bbpreset === 'classic') {
+      P.bb.foods = ['F01', 'F10', 'F09', 'F22', 'F24', 'F40', 'N12', 'F29', 'N01', 'N02'];
+    } else if (d.bbpreset === 'budget') {
+      P.bb.foods = ['F09', 'F10', 'IR01', 'IR02', 'F17', 'F18', 'F21', 'F22', 'F26', 'F31', 'F35', 'N10', 'N04', 'N27'];
+    } else if (d.bbpreset === 'premium') {
+      P.bb.foods = ['F04', 'F07', 'F03', 'F08', 'F16', 'F22', 'F28', 'F27', 'F42', 'F38', 'N47', 'N12', 'N14', 'N37', 'F46'];
+    }
+    P.plan = null;
+    persist(true);
+    const y = scrollY;
+    renderMain();
+    scrollTo(0, y);
+    toast('سبد غذایی با موفقیت تنظیم شد.');
+    return;
+  }
   else if (d.tog) setPath(P, d.tog, !getPath(P, d.tog));
   else if (d.set) { const v = d.v; setPath(P, d.set, isNaN(v) ? v : +v); }
   else if (d.dis) { const s = new Set(P.dislikes || []); s.has(d.dis) ? s.delete(d.dis) : s.add(d.dis); P.dislikes = [...s]; }

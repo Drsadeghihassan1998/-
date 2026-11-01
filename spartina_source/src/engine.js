@@ -112,8 +112,9 @@ const BB_GOAL = {
 };
 const BB_TIME = { morning: 'صبح', noon: 'ظهر', afternoon: 'عصر', evening: 'شب' };
 const bbOf = p => {
-  const b = Object.assign({ goal: 'recomp', days: [0, 2, 4], time: 'afternoon', bf: '', ppk: '', sup: {}, micOff: {}, detox: { on: false, days: 14 } }, p.bb || {});
+  const b = Object.assign({ goal: 'recomp', days: [0, 2, 4], time: 'afternoon', bf: '', ppk: '', sup: {}, micOff: {}, detox: { on: false, days: 14 }, foods: [] }, p.bb || {});
   if (b.creatine && b.sup.creatine == null) b.sup = { ...b.sup, creatine: true }; // پرونده‌های نسخه‌ی قبل
+  if (!Array.isArray(b.foods)) b.foods = [];
   return b;
 };
 /* مکمل‌های ورزشی انتخاب‌شده توسط پزشک */
@@ -340,7 +341,7 @@ function rawEq(id, g) {
 }
 
 /* یک الگو را برای بیمار قابل اجرا می‌کند (انتخاب غذا از هر مخزن) */
-function instantiate(tpl, ok, R, prefer, used) {
+function instantiate(tpl, ok, R, prefer, used, userFoods) {
   const items = [];
   for (const c of tpl.c) {
     let cand = poolList(c.p).filter(id => ok[id]);
@@ -348,6 +349,18 @@ function instantiate(tpl, ok, R, prefer, used) {
     let fb = false;
     if (!cand.length && !c.opt && FALLBACK[c.r]) { cand = FALLBACK[c.r].filter(id => ok[id]); fb = true; }
     if (!cand.length) { if (c.opt) continue; return null; }
+
+    // اگر کاربر در بدنسازی سبد غذایی اختصاصی انتخاب کرده:
+    if (userFoods && userFoods.length > 0) {
+      const direct = cand.filter(id => userFoods.includes(id));
+      if (direct.length > 0) {
+        cand = direct;
+      } else if (['P', 'C'].includes(c.r)) {
+        const roleMatches = userFoods.filter(id => ok[id] && (c.r === 'P' ? nv(id, 'p') >= 7 : nv(id, 'c') >= 15));
+        if (roleMatches.length > 0) cand = roleMatches;
+      }
+    }
+
     // ترجیح: غذاهایی که اخیراً استفاده نشده‌اند و برچسب ترجیحی دارند
     const w = cand.map(id => {
       let x = 1;
@@ -442,12 +455,13 @@ function regenMeal(p, T, meal) {
   const { ok } = allowedFoods(p, T);
   const R = rng(Date.now());
   const prefer = preferSet(p, T);
+  const userFoods = p.prog === 'bb' && p.bb && Array.isArray(p.bb.foods) && p.bb.foods.length > 0 ? p.bb.foods : null;
   const list = TEMPLATES[SLOT_TYPE[meal.slot]].filter(t => tplAllowed(t, meal.slot, p));
   list.sort(() => R() - 0.5);
   if (meal.post) list.sort((a, b) => ((b.tags || []).includes('post') - (a.tags || []).includes('post')));
   list.sort((a, b) => (a.id === meal.tpl) - (b.id === meal.tpl));
   for (const t of list) {
-    let items = instantiate(t, ok, R, prefer, null);
+    let items = instantiate(t, ok, R, prefer, null, userFoods);
     if (!items) continue;
     items = sizeMeal(items, T.kcal * meal.share, T.prot * meal.share, T.fat * meal.share, scaleOf(T));
     return { slot: meal.slot, tpl: t.id, name: mealName(t, items), share: meal.share, post: meal.post, items };
@@ -464,6 +478,7 @@ function generatePlan(p, T, seed) {
   const prefer = preferSet(p, T);
   const usedFood = {}, usedTpl = {};
   const days = [];
+  const userFoods = p.prog === 'bb' && p.bb && Array.isArray(p.bb.foods) && p.bb.foods.length > 0 ? p.bb.foods : null;
   for (let d = 0; d < 7; d++) {
     const meals = [], today = new Set();
     const train = isTrainDay(p, d);
@@ -479,6 +494,10 @@ function generatePlan(p, T, seed) {
         if (post && (t.tags || []).includes('post')) w *= 3;
         if (t.need && (se.constipation || se.nausea)) w *= 2;
         if (today.has(t.id)) w *= 0.05;
+        if (userFoods && t.c) {
+          const hasFav = t.c.some(comp => poolList(comp.p).some(fid => userFoods.includes(fid)));
+          if (hasFav) w *= 3.5;
+        }
         return [t, w];
       });
       let chosen = null, items = null;
@@ -487,7 +506,7 @@ function generatePlan(p, T, seed) {
         let s = R() * tot;
         for (const [t, w] of scored) { s -= w; if (s <= 0) { chosen = t; break; } }
         if (!chosen) chosen = scored[scored.length - 1][0];
-        items = instantiate(chosen, ok, R, prefer, usedFood);
+        items = instantiate(chosen, ok, R, prefer, usedFood, userFoods);
         if (!items) { const ix = scored.findIndex(x => x[0] === chosen); if (ix >= 0) scored.splice(ix, 1); chosen = null; if (!scored.length) break; }
       }
       if (!items) continue;
@@ -534,7 +553,12 @@ function weekAvg(plan) {
 function swapOptions(p, T, id) {
   const { ok } = allowedFoods(p, T);
   const fam = SWAP_FAMILY[META[id].g] || [META[id].g];
-  return Object.keys(META).filter(x => x !== id && ok[x] && fam.includes(META[x].g));
+  const userFoods = p.prog === 'bb' && p.bb && Array.isArray(p.bb.foods) ? p.bb.foods : [];
+  const list = Object.keys(META).filter(x => x !== id && ok[x] && fam.includes(META[x].g));
+  if (userFoods.length > 0) {
+    list.sort((a, b) => (userFoods.includes(b) ? 1 : 0) - (userFoods.includes(a) ? 1 : 0));
+  }
+  return list;
 }
 
 /* جانشینی هم‌ارز: پروتئین برای نقش P، چربی برای F، انرژی برای بقیه */

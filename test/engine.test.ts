@@ -349,6 +349,56 @@ test('visual comparison chart container and update function', () => {
   assert.equal(typeof updateCmpVisualChart, 'function', 'updateCmpVisualChart must be a defined function');
 });
 
+test('Bodybuilding custom food selection prioritizes specified staple foods', () => {
+  const { computeTargetsBB, generatePlan } = context as any;
+
+  // Patient selects a strict classic bodybuilding food basket:
+  const selectedFoods = ['F01', 'F10', 'F22', 'F24', 'F40', 'N12', 'F29']; // Chicken, egg whites, rice, oats, peanut butter, broccoli, banana
+  const patient = {
+    prog: 'bb',
+    name: 'تست بدنسازی با غذای انتخابی',
+    age: 28,
+    sex: 'm',
+    height: 182,
+    weight: 84,
+    activity: 2,
+    bb: {
+      goal: 'cut',
+      days: [0, 2, 4],
+      time: 'afternoon',
+      foods: selectedFoods
+    },
+    hx: {},
+    labs: {}
+  };
+
+  const targets = computeTargetsBB(patient);
+  assert.ok(targets.kcal > 1800, 'Adequate calories for athlete');
+  assert.ok(targets.prot >= 84 * 2.0, 'High protein target for bodybuilding cut');
+
+  const plan = generatePlan(patient, targets);
+  assert.equal(plan.days.length, 7, 'Plan has 7 days');
+
+  const allUsedFoodIds = new Set<string>();
+  plan.days.forEach((day: any) => {
+    day.meals.forEach((meal: any) => {
+      meal.items.forEach((item: any) => {
+        allUsedFoodIds.add(item.id);
+      });
+    });
+  });
+
+  // Verify that all core selected foods appear in the generated plan
+  const matchedCount = selectedFoods.filter(fid => allUsedFoodIds.has(fid)).length;
+  assert.equal(matchedCount, selectedFoods.length, `All ${selectedFoods.length} selected foods should appear in the plan`);
+
+  // Verify that chicken (F01) and rice (F22) or oats (F24) are prominently present
+  assert.ok(allUsedFoodIds.has('F01'), 'Chicken breast is used');
+  assert.ok(allUsedFoodIds.has('F22'), 'Rice is used');
+  assert.ok(allUsedFoodIds.has('F24'), 'Oats are used');
+});
+
+
 
 
 

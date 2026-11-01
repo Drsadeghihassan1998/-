@@ -75,7 +75,7 @@ function exportIntake(kind) {
 function intakeReply() {
   const p = {};
   IN_FIELDS.forEach(k => { if (P[k] !== undefined) p[k] = P[k]; });
-  if (P.prog === 'bb') { const b = bbOf(P); p.bb = { goal: b.goal, days: b.days, time: b.time, bf: b.bf }; }
+  if (P.prog === 'bb') { const b = bbOf(P); p.bb = { goal: b.goal, days: b.days, time: b.time, bf: b.bf, foods: b.foods || [] }; }
   return { type: 'spartina-intake-reply', v: 1, sent: Date.now(), patient: p };
 }
 // کد متنی پاسخ: «SPI1:» + base64 متن JSON (UTF-8)
@@ -452,6 +452,28 @@ function tabTrain() {
     <div class="sub">ساعت تمرین</div><div class="chips">${pick('bb.time', 'morning', 'صبح', '۶ تا ۱۰')}${pick('bb.time', 'noon', 'ظهر', '۱۰ تا ۱۴')}${pick('bb.time', 'afternoon', 'عصر', '۱۴ تا ۱۸')}${pick('bb.time', 'evening', 'شب', '۱۸ به بعد')}</div>
     <div class="alert teal" style="margin-top:14px">در روزهای تمرین یک وعده‌ی «قبل از تمرین» حدود ۱ تا ۲ ساعت پیش از تمرین، و وعده‌ی اصلی بعدی به‌عنوان «بعد از تمرین» با پروتئین و کربوهیدرات بیشتر چیده می‌شود.</div>
     <div class="sub">سطح فعالیت کل روز (با احتساب تمرین)</div><div class="chips">${ACT.map((a, i) => pick('activity', i, a.t, a.d)).join('')}</div></section>
+    <section class="card">
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:6px">
+        <h2 style="margin:0">سبد غذاهای انتخابی شما در برنامه بدنسازی</h2>
+        <span style="font-size:12px;color:var(--muted);background:var(--saffs);padding:3px 10px;border-radius:999px;border:1px solid #F6D9A5">${b.foods && b.foods.length ? fa(b.foods.length) + ' قلم غذا برگزیده شده' : 'همه غذاها (انتخاب خودکار)'}</span>
+      </div>
+      <p class="lead">دقیقاً غذاهایی را که می‌خواهید در وعده‌های روزانه شما باشد تیک بزنید؛ موتور هوشمند برنامه، رژیم شما را منحصراً از میان همین غذاها (متناسب با توان مالی و سلیقه غذایی شما) با مقادیر گرمی استاندارد می‌چیند.</p>
+      <div style="display:flex; gap:6px; flex-wrap:wrap; margin-bottom:14px">
+        <button type="button" class="btn sm ghost" data-bbpreset="classic">⚡️ کلاسیک بدنسازی (مرغ، برنج، سفیده، جودوسر)</button>
+        <button type="button" class="btn sm ghost" data-bbpreset="budget">💰 اقتصادی و کم‌هزینه (تخم‌مرغ، کشک، عدس، سیب‌زمینی)</button>
+        <button type="button" class="btn sm ghost" data-bbpreset="premium">⭐ پریمیوم (فیله گوساله، سالمون، بوقلمون، وی)</button>
+        <button type="button" class="btn sm ghost" data-bbpreset="clear">🔄 پاک کردن همه (انتخاب آزاد و خودکار)</button>
+      </div>
+      ${(typeof BB_FOOD_CATEGORIES !== 'undefined' ? BB_FOOD_CATEGORIES : []).map(cat => `
+        <div class="sub" style="margin-top:10px">${cat.title}</div>
+        <div class="chips">
+          ${cat.items.map(([fid, name]) => {
+            const on = (b.foods || []).includes(fid);
+            return `<span class="chip ${on ? 'on' : ''}" data-bbfood="${fid}">${on ? '✓ ' : '＋ '}${name}</span>`;
+          }).join('')}
+        </div>
+      `).join('')}
+    </section>
     ${IN ? '' : `<section class="card">
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:6px">
         <h2 style="margin:0">مکمل‌های ورزشی <span class="draft">با تأیید پزشک</span></h2>
@@ -868,6 +890,38 @@ document.addEventListener('click', e => {
     return;
   }
   if (d.bbday != null) { P.bb = bbOf(P); const i = +d.bbday, s = new Set(P.bb.days); s.has(i) ? s.delete(i) : s.add(i); P.bb.days = [...s].sort(); }
+  else if (d.bbfood != null) {
+    P.bb = bbOf(P);
+    const fid = d.bbfood;
+    const s = new Set(P.bb.foods || []);
+    s.has(fid) ? s.delete(fid) : s.add(fid);
+    P.bb.foods = [...s];
+    P.plan = null;
+    persist(true);
+    const y = scrollY;
+    renderMain();
+    scrollTo(0, y);
+    return;
+  }
+  else if (d.bbpreset != null) {
+    P.bb = bbOf(P);
+    if (d.bbpreset === 'clear') {
+      P.bb.foods = [];
+    } else if (d.bbpreset === 'classic') {
+      P.bb.foods = ['F01', 'F10', 'F09', 'F22', 'F24', 'F40', 'N12', 'F29', 'N01', 'N02'];
+    } else if (d.bbpreset === 'budget') {
+      P.bb.foods = ['F09', 'F10', 'IR01', 'IR02', 'F17', 'F18', 'F21', 'F22', 'F26', 'F31', 'F35', 'N10', 'N04', 'N27'];
+    } else if (d.bbpreset === 'premium') {
+      P.bb.foods = ['F04', 'F07', 'F03', 'F08', 'F16', 'F22', 'F28', 'F27', 'F42', 'F38', 'N47', 'N12', 'N14', 'N37', 'F46'];
+    }
+    P.plan = null;
+    persist(true);
+    const y = scrollY;
+    renderMain();
+    scrollTo(0, y);
+    toast('سبد غذایی با موفقیت تنظیم شد.');
+    return;
+  }
   else if (d.tog) setPath(P, d.tog, !getPath(P, d.tog));
   else if (d.set) { const v = d.v; setPath(P, d.set, isNaN(v) ? v : +v); }
   else if (d.dis) { const s = new Set(P.dislikes || []); s.has(d.dis) ? s.delete(d.dis) : s.add(d.dis); P.dislikes = [...s]; }
